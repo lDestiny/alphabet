@@ -17,12 +17,13 @@ function isLetter(obj: any): obj is ILetter {
 try { 
     const json = localStorage.getItem('letters');
     if (json) {
-        const data = JSON.parse(json);   
-        if (!Array.isArray(data) || !data.every(isLetter)){
-            throw new Error('Error');            
-        } else {
-            letters = data;
+        const data = JSON.parse(json); 
+        if (!Array.isArray(data) || !data.every(isLetter) || !data.length){
+            throw new Error();            
         }
+        letters = data;
+    } else {
+        throw new Error();
     }
 } catch(err) {
     letters = defaultData
