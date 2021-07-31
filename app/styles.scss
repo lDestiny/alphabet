@@ -1,0 +1,61 @@
+@import 'globals';
+
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: $default-color;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.button,
+button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: $accent-color;
+    color: $light-color;
+    border: none;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+        font-weight: normal;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: auto;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 360px;
+
+    @media (min-width: $tablet) {
+        max-width: 768px;
+    }
+
+    @media (min-width: $laptop) {
+        max-width: 960px;
+    }
+
+    @media (min-width: $desktop) {
+        max-width: 1168px;
+    }
+}

@@ -1,0 +1,30 @@
+<div class="container">
+    <div *ngIf="activeLetter">
+        <div class="letter-presentation">
+            <div class="letter">
+                {{activeLetter.code.toUpperCase()}}{{activeLetter.code.toLowerCase()}}
+            </div>
+            <div class="example">
+                <img src="assets/{{activeLetter.image}}">
+                <div class="label">
+                    <span>{{activeLetter.label.substr(0, 1).toUpperCase()}}</span>{{activeLetter.label.substr(1, activeLetter.label.length)}}
+                </div>
+            </div>
+        </div>
+        <div class="letter-challenge">
+            <div>
+                Найдите (кликните) букву <span class="accented">&nbsp;{{activeLetter?.code}}&nbsp;</span> в слове:
+            </div>
+            <div class="word">
+                <span *ngFor="let letter of word" 
+                    (click)="check(letter)"
+                    [class.accented]="letter.active">{{letter.code}}</span>
+                <sup *ngIf="answer !== undefined" 
+                    class="message"
+                    [class.error]="!answer">{{answer ? 'Правильно!' : 'Не правильно!'}}</sup>
+            </div>
+        </div>
+    </div>
+
+    <alphabet [activeLetter]="activeLetter?.code" [letters]="letters"></alphabet>
+</div>

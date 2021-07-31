@@ -1,0 +1,7 @@
+<div class="letters">
+    <a *ngFor="let letter of letters" 
+        [routerLink]="['/challenge', letter.code]"
+        [class.selected]="letter.code === activeLetter"
+        [class.vovel]="letter.isVovel"
+        class="letter">{{ letter.code.toUpperCase() }}{{ letter.code.toLowerCase() }}</a>
+</div>

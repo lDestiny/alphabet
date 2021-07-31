@@ -1,0 +1,42 @@
+@import './variables';
+
+:host {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.letters {
+    display: flex;
+    padding: 14px 0 12px 0;   
+    justify-content: center; 
+    max-width: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    border: 1px solid $alpthabet-border-color;
+    border-radius: 5px;
+
+    .letter {
+        color: $alpthabet-letter-color;
+        text-decoration: none;
+        display: block;
+        margin: 4px;
+        margin: 4px;
+        min-width: 44px;
+        width: 44px;
+        text-align: center;
+        font-size: 24px;
+
+        &.vovel {
+            color: $alpthabet-selected-letter-color;
+        }
+
+        &.selected {
+            border-bottom: 1px solid;
+            font-size: 26px;
+            margin: 0 4px;
+        }
+    }
+}
