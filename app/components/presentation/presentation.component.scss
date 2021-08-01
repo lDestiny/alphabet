@@ -1,0 +1,47 @@
+@import 'globals';
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 48px 0;
+    width: 100%;
+    max-width: 100%;
+
+    .letter {
+        color: $warning-color;
+        font-size: 96px;
+    }
+
+    .example {
+        img {
+            width: 180px;
+
+        }
+
+        .label {
+            font-size: 32px;
+
+            span {
+                color: $warning-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media (min-width: $tablet) {
+        .letter {
+            font-size: 256px;
+        }
+
+        .example {
+            img {
+                width: 360px;
+            }
+
+            .label {
+                font-size: 42px;
+            }
+        }
+    }
+}

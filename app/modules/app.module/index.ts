@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoot } from './app-root';
 import { MainView, ChallengeView } from '@views';
-import { AlphabetComponent } from '@components';
+import { AlphabetComponent, PresentationComponent, ChallengeComponent } from '@components';
 
 @NgModule({
     imports: [
@@ -19,7 +19,9 @@ import { AlphabetComponent } from '@components';
         AppRoot,
         MainView,
         ChallengeView,
-        AlphabetComponent
+        AlphabetComponent,
+        PresentationComponent,
+        ChallengeComponent
     ],
     bootstrap: [
         AppRoot

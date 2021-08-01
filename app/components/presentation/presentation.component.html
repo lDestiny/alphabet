@@ -1,0 +1,11 @@
+<ng-container *ngIf="letter">
+    <div class="letter">
+        {{letter.code.toUpperCase()}}{{letter.code.toLowerCase()}}
+    </div>
+    <div class="example">
+        <img src="assets/{{letter.image}}">
+        <div class="label">
+            <span>{{letter.label.substr(0, 1).toUpperCase()}}</span>{{letter.label.substr(1, letter.label.length)}}
+        </div>
+    </div>
+</ng-container>

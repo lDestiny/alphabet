@@ -28,19 +28,6 @@ try {
 } catch(err) {
     letters = defaultData
 }
-
-
-function getRandomInt(max: number) {
-    return Math.floor(Math.random() * max);
-}
-
-interface IWordLetter {
-    active: boolean;
-    code: string;
-}
-
-let timeout: NodeJS.Timeout;
-
 @Component({
     selector: 'challenge-view',
     templateUrl: './challenge.view.html',
@@ -50,45 +37,16 @@ let timeout: NodeJS.Timeout;
 export class ChallengeView {
     activeLetter?: ILetter;
     letters = letters;
-    answer?: boolean;
-    private _word: Array<IWordLetter> = [];
 
     constructor(private _route: ActivatedRoute) {
         localStorage.setItem('letters', JSON.stringify(this.letters));
         this.activeLetter = this.letters.find(letter => letter.code == _route.snapshot.params['letter']);
-        if (this.activeLetter) this.word = this.activeLetter.words[getRandomInt(this.activeLetter.words.length)]
-    }
-
-    set word(data: any) { 
-        this._word = String(data).split('')
-            .map((item: string) => {
-                return {
-                    active: false,
-                    code: item
-                }
-            })
-    }
-
-    get word(): Array<IWordLetter> {
-        return this._word;
-    }
-
-    check(letter: IWordLetter) {
-        const answer = this.activeLetter?.code.toLowerCase() == letter.code.toLowerCase()
-        letter.active = answer;
-        this.answer = answer;
-        timeout = setTimeout(() => {
-            if(timeout) clearTimeout(timeout);
-            this.answer = undefined;            
-        }, 600);
     }
 
     ngOnInit() {
         this._route.url
             .subscribe(() => {
                 this.activeLetter = this.letters.find(letter => letter.code == this._route.snapshot.params['letter']);
-                if (this.activeLetter) this.word = this.activeLetter.words[getRandomInt(this.activeLetter.words.length)];
-                this.answer = undefined;
             });
     }
 }

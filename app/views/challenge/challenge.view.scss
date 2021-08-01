@@ -1,5 +1,4 @@
 @import 'globals';
-@import './variables';
 
 :host {
     flex: 1;
@@ -9,51 +8,51 @@
     flex-direction: column;
 }
 
-.letter-presentation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 48px 0;
-    width: 100%;
-    max-width: 100%;
+// .letter-presentation {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     margin: 48px 0;
+//     width: 100%;
+//     max-width: 100%;
 
-    .letter {
-        color: $challenge-letter-color;
-        font-size: 96px;
-    }
+//     .letter {
+//         color: $challenge-letter-color;
+//         font-size: 96px;
+//     }
 
-    .example {
-        img {
-            width: 180px;
+//     .example {
+//         img {
+//             width: 180px;
 
-        }
+//         }
 
-        .label {
-            font-size: 32px;
+//         .label {
+//             font-size: 32px;
 
-            span {
-                color: $challenge-letter-color;
-                text-transform: uppercase;
-            }
-        }
-    }
+//             span {
+//                 color: $challenge-letter-color;
+//                 text-transform: uppercase;
+//             }
+//         }
+//     }
 
-    @media (min-width: $tablet) {
-        .letter {
-            font-size: 256px;
-        }
+//     @media (min-width: $tablet) {
+//         .letter {
+//             font-size: 256px;
+//         }
 
-        .example {
-            img {
-                width: 360px;
-            }
+//         .example {
+//             img {
+//                 width: 360px;
+//             }
 
-            .label {
-                font-size: 42px;
-            }
-        }
-    }
-}
+//             .label {
+//                 font-size: 42px;
+//             }
+//         }
+//     }
+// }
 
 .letter-challenge {
     width: 100%;
@@ -66,7 +65,7 @@
 
     span {
         &.accented {
-            color: $challenge-letter-color;
+            color: $warning-color;
         }
     }
 
@@ -83,7 +82,7 @@
         }
 
         .message {
-            background-color: $challenge-success-color;
+            background-color: $success-color;
             color: $light-color;
             font-weight: bold;
             border-radius: 5px;
@@ -93,7 +92,7 @@
             left: 100%;
 
             &.error {
-                background-color: $challenge-letter-color;
+                background-color: $warning-color;
             }
         }
     }

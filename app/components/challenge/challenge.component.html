@@ -1,0 +1,13 @@
+<ng-container *ngIf="letter">
+    <div>
+        Найдите (кликните) букву <span class="accented">&nbsp;{{letter?.code}}&nbsp;</span> в слове:
+    </div>
+    <div class="word">
+        <span *ngFor="let letter of word" 
+            (click)="check(letter)"
+            [class.accented]="letter.active">{{letter.code}}</span>
+        <sup *ngIf="answer !== undefined" 
+            class="message"
+            [class.error]="!answer">{{answer ? 'Правильно!' : 'Не правильно!'}}</sup>
+    </div>
+</ng-container>
