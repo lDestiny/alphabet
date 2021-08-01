@@ -16,30 +16,6 @@ html, body {
     font-size: 16px;
 }
 
-.button,
-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 16px;
-    border-radius: 2px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: $accent-color;
-    color: $light-color;
-    border: none;
-    text-decoration: none;
-
-    &:hover {
-        opacity: 0.8;
-        font-weight: normal;
-    }
-
-    &:disabled {
-        opacity: 0.5;
-        cursor: auto;
-    }
-}
-
 .container {
     margin: 0 auto;
     padding: 0 16px;

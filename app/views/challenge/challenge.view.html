@@ -1,8 +1,8 @@
 <div class="container">
     <ng-container *ngIf="activeLetter">
-        <presentation [letter]="activeLetter"></presentation>
-        <challenge [letter]="activeLetter"></challenge>
+        <al-presentation [letter]="activeLetter"></al-presentation>
+        <al-challenge [letter]="activeLetter"></al-challenge>
     </ng-container>
 
-    <alphabet [activeLetter]="activeLetter?.code" [letters]="letters"></alphabet>
+    <al-alphabet [activeLetter]="activeLetter?.code" [letters]="letters"></al-alphabet>
 </div>

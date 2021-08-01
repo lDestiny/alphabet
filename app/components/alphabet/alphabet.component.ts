@@ -9,7 +9,7 @@ export interface ILetter {
 }
 
 @Component({
-    selector: 'alphabet',
+    selector: 'al-alphabet',
     templateUrl: './alphabet.component.html',
     styleUrls: ['./alphabet.component.scss']
 })

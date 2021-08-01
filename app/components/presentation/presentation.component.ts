@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ILetter } from '@components';
 
 @Component({
-    selector: 'presentation',
+    selector: 'al-presentation',
     templateUrl: './presentation.component.html',
     styleUrls: ['./presentation.component.scss']
 })

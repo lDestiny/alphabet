@@ -1,0 +1,27 @@
+@import 'globals';
+
+:host {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: $accent-color;
+    border: none;
+    text-decoration: none;
+
+    .al-button-label {
+        color: $light-color;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        font-weight: normal;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: auto;
+    }
+}

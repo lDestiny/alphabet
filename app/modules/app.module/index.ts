@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoot } from './app-root';
 import { MainView, ChallengeView } from '@views';
-import { AlphabetComponent, PresentationComponent, ChallengeComponent } from '@components';
+import { AlphabetComponent, PresentationComponent, ChallengeComponent, ButtonComponent } from '@components';
 
 @NgModule({
     imports: [
@@ -21,7 +21,8 @@ import { AlphabetComponent, PresentationComponent, ChallengeComponent } from '@c
         ChallengeView,
         AlphabetComponent,
         PresentationComponent,
-        ChallengeComponent
+        ChallengeComponent,
+        ButtonComponent
     ],
     bootstrap: [
         AppRoot

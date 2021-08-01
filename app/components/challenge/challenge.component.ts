@@ -14,7 +14,7 @@ interface IWordLetter {
 let timeout: NodeJS.Timeout;
 
 @Component({
-    selector: 'challenge',
+    selector: 'al-challenge',
     templateUrl: './challenge.component.html',
     styleUrls: ['./challenge.component.scss']
 })
